@@ -1,6 +1,7 @@
 {
-	"name": "vs_upload_j",
-	"displayName": "vs_upload_j",
+	"name": "vspWepackautoUploadJ",
+	"displayName": "vspWepackautoUploadJ",
+	"publisher": "jiangji",
 	"description": "",
 	"version": "0.0.1",
 	"engines": {
@@ -55,12 +56,13 @@
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^5.2.7",
 		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.40.0",
 		"eslint": "^6.6.0",
 		"glob": "^7.1.5",
 		"mocha": "^6.2.2",
 		"typescript": "^3.6.4",
 		"vscode-test": "^1.2.2"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"@types/vscode": "1.20.0"
+	}
 }
