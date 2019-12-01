@@ -12,3 +12,5 @@ webpack_auto_upload_j 的 [详细介绍的链接2](https://github.com/jiangji1/w
 
 如图
 ![图片](http://www.jiangji1.com/static/upload_0b9c9aad56dcc7db3504e55d811b41f4.jpg)
+
+如果图片挂了，可以点这里打开 [http://www.jiangji1.com/static/upload_0b9c9aad56dcc7db3504e55d811b41f4.jpg](http://www.jiangji1.com/static/upload_0b9c9aad56dcc7db3504e55d811b41f4.jpg)
