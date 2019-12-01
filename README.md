@@ -11,6 +11,4 @@ webpack_auto_upload_j 的 [详细介绍的链接1](https://juejin.im/post/5de241
 webpack_auto_upload_j 的 [详细介绍的链接2](https://github.com/jiangji1/webpack_auto_upload_j)
 
 如图
-![图片](http://www.jiangji1.com/static/upload_031d4d21568f269be63281b7dcc5041d.jpg)
-
-如果图片挂了，可以点这里打开 [http://www.jiangji1.com/static/upload_031d4d21568f269be63281b7dcc5041d.jpg](http://www.jiangji1.com/static/upload_031d4d21568f269be63281b7dcc5041d.jpg)
+![图片](https://raw.githubusercontent.com/jiangji1/vscode_plugin_to_webpack_auto_upload_j/master/imgs/kaiguan.png)
