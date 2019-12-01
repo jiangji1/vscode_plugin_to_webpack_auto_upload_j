@@ -1,0 +1,4 @@
+.vscode
+node_modules
+vsc-extension-quickstart.md
+yarn.lock
