@@ -17,14 +17,15 @@ async function handler (com) {
 		Object.prototype.hasOwnProperty.call(config, 'up') &&
 		Object.prototype.toString.call(config.up) === '[object Object]'
 	) {
-		const a = com === 'df'
-		config.up.kaiguan = a? true: false
+		const arr = ['build', 'build_upload_test', 'build_upload_pro']
+		const a = arr[com]
+		config.up.kaiguan = a
 		fs.writeFileSync(paj, JSON.stringify(config, 0, '\t'))
-		vscode.window.showInformationMessage(`修改为成功,${a}是${a? '': '不'}发布`)
+		vscode.window.showInformationMessage(`修改为成功:${a}`)
 		
-		const startShell = config.up.start
+		const startShell = config.up[com]
 		if (!startShell) {
-			vscode.window.showInformationMessage('在package.json中,未正确取到up中的start')
+			vscode.window.showInformationMessage('在package.json中,未正确取到up中的shell命令')
 			return
 		}
 		await vscode.commands.executeCommand('workbench.action.terminal.focus')
@@ -34,14 +35,17 @@ async function handler (com) {
 }
 
 function activate(context) {
-	const df = vscode.commands.registerCommand('df', async function (url) {
-		handler('df')
+	const build = vscode.commands.registerCommand('build', async function (url) {
+		handler('build')
 	});
-	const d = vscode.commands.registerCommand('d', async function (url) {
-		handler('d')
+	const build_upload_test = vscode.commands.registerCommand('build_upload_test', async function (url) {
+		handler('build_upload_test')
+	});
+	const build_upload_pro = vscode.commands.registerCommand('build_upload_pro', async function (url) {
+		handler('build_upload_pro')
 	});
 
-	context.subscriptions.push(df, d);
+	context.subscriptions.push(build, build_upload_test, build_upload_pro);
 }
 exports.activate = activate;
 

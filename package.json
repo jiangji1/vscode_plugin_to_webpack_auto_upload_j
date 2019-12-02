@@ -3,7 +3,7 @@
 	"displayName": "vspWepackautoUploadJ",
 	"publisher": "jiangji",
 	"description": "",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.20.0"
 	},
@@ -11,23 +11,32 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:df",
-		"onCommand:d"
+		"onCommand:build",
+		"onCommand:build_upload_test",
+		"onCommand:build_upload_pro"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "df",
-				"title": "build_upload",
+				"command": "build",
+				"title": "build",
 				"icon": {
 					"light": "imgs/fei.svg",
 					"dark": "imgs/fei.svg"
 				}
 			},
 			{
-				"command": "d",
-				"title": "build",
+				"command": "build_upload_test",
+				"title": "build_upload_test",
+				"icon": {
+					"light": "imgs/fei.svg",
+					"dark": "imgs/fei.svg"
+				}
+			},
+			{
+				"command": "build_upload_pro",
+				"title": "build_upload_pro",
 				"icon": {
 					"light": "imgs/fei.svg",
 					"dark": "imgs/fei.svg"
@@ -38,12 +47,17 @@
 			"editor/context": [
 				{
 					"when": "editorFocus",
-					"command": "d",
+					"command": "build",
 					"group": "navigation"
 				},
 				{
 					"when": "editorFocus",
-					"command": "df",
+					"command": "build_upload_test",
+					"group": "navigation"
+				},
+				{
+					"when": "editorFocus",
+					"command": "build_upload_pro",
 					"group": "navigation"
 				}
 			]
@@ -64,5 +78,6 @@
 	},
 	"dependencies": {
 		"@types/vscode": "1.20.0"
-	}
+	},
+	"repository": "https://github.com/jiangji1/vscode_plugin_to_webpack_auto_upload_j.git"
 }
