@@ -17,8 +17,12 @@ async function handler (com) {
 		Object.prototype.hasOwnProperty.call(config, 'up') &&
 		Object.prototype.toString.call(config.up) === '[object Object]'
 	) {
-		const arr = ['build', 'build_upload_test', 'build_upload_pro']
-		const a = arr[com]
+		const obj = {
+			'build': 0,
+			'build_upload_test': 1,
+			'build_upload_pro': 2
+		}
+		const a = obj[com]
 		config.up.kaiguan = a
 		fs.writeFileSync(paj, JSON.stringify(config, 0, '\t'))
 		vscode.window.showInformationMessage(`修改为成功:${a}`)
